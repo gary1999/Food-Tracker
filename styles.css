@@ -83,8 +83,8 @@ body{
     border-radius: 2px;
     border: solid red;
 
-    height: 800vh;
-    max-height: 800px;
+    height: 600px;
+    /* max-height: 400px; */
     width: 500px;
 }
 
