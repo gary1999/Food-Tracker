@@ -1,0 +1,3 @@
+I would like to make a website that allows me to track food from restaurants that I have eaten. 
+It'll have a review or star rating so that I remember how nice it was when I had it. 
+I'd like to be able to search up the food name or restaurant I got it from to see if I've eaten it/there before.

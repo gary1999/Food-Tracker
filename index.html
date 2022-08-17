@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Past-Eats</a></li>
+            <li><a href="#">Best Rated</a></li>
+        </ul>
+    </div>
+    
+    <div class="home-content">
+        <div class="info">
+            <h1>Welcome to Food Tracker!</h1>
+            <p>Here you can add all the things you've eaten before 
+                and rate them how you please so you can look back on it.</p>
+        </div>
+    </div>
+
+    <div class="input-content">
+
+        <div class="input-container">
+            <div class="input">
+
+                <div class="input-restaurant-name">
+                    <label for="restaurant-name">Restaurant Name:</label>
+                    <textarea id="restaurant-name" name="restaurant-name"></textarea>
+                </div>
+                
+                <div class="input-review-rating">
+                    <label for="review-rating" name="review-rating">Rating: </label>
+                        <div class="review-star-container">
+                        <input type="radio" id="review-rating-one" name="review-rating-score" value="1">
+                        <label for="rating-one">1</label><br>
+                        <input type="radio" id="review-rating-two" name="review-rating-score" value="2">
+                        <label for="rating-two">2</label><br>
+                        <input type="radio" id="review-rating-three" name="review-rating-score" value="3">
+                        <label for="rating-three">3</label><br>
+                        <input type="radio" id="review-rating-four" name="review-rating-score" value="4">
+                        <label for="rating-four">4</label><br>
+                        <input type="radio" id="review-rating-five" name="review-rating-score" value="5">
+                        <label for="rating-five">5</label><br>
+                    </div>
+                </div>
+
+                <div class="input-review-notes">
+                    <label for="review-notes">Add notes about your experience:</label><br>
+                    <textarea id="review-notes" name="review-notes"></textarea>
+                </div>
+                    
+                <div class="input-photos">
+                    <label for="input-photos">Add photos: </label>
+                    <input type="file" id="photo" name="photo">
+                </div>
+
+                <input type="submit" value="Submit" class="submit-button">
+            </div>
+
+    </div>
+
+</body>
+</html>
