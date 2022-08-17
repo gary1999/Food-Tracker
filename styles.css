@@ -48,8 +48,7 @@ body{
 }
 
 .home-content {
-    border-radius: 2px;
-    border: solid red;
+
     padding: 5px;
     margin: 10px;
 }
@@ -101,7 +100,7 @@ body{
     margin-bottom: 10px;
 }
 
-#restaurant-name {
+#restaurant-name, #food-name {
     margin-top: 10px;
     padding: 10px;
     height: 38px;

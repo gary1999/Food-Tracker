@@ -1,4 +1,4 @@
-let foods = `[
+[
     {
         "restaurant":"McDonalds",
         "rating": 1,
@@ -9,6 +9,4 @@ let foods = `[
         "rating": 1000000,
         "review-notes": "GOOD"
     }
-]`
-
-console.log(JSON.parse(foods)[0].restaurant);
+]
