@@ -18,3 +18,12 @@ fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
 
     }
 })
+
+const newRestaurant = {
+    restaurant: "Carl's Jr",
+    rating: 4,
+    review: "Average",
+};
+
+const addTojson = JSON.stringify(newRestaurant);
+console.log(addTojson);
