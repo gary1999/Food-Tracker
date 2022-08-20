@@ -17,10 +17,17 @@ fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
     else {
         try {
             const foodsData = JSON.parse(jsonString);
-            console.log(foodsData);
+            //console.log(foodsData);
             foodsData['restaurants'].push(newRestaurant);
-            // jsonStr = JSON.stringify(foodsData);
-            console.log(foodsData);
+            fs.writeFile('./Foods.json', JSON.stringify(foodsData, null, 4), err => {
+                if (err) {
+                    console.log("Error writing to file", err);
+                }
+                else{
+                    console.log('Success');
+                }
+            })
+            //console.log(foodsData);
         }
         catch (err) {
             console.log('Error parsing JSON', err);
@@ -28,6 +35,8 @@ fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
 
     }
 })
+
+
 
 // const newRestaurant = {
 //     restaurant: "Carl's Jr",

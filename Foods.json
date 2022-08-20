@@ -1,15 +1,29 @@
 {
-    "restaurants": 
-    [
+    "restaurants": [
         {
-            "restaurant":"McDonalds",
+            "restaurant": "McDonalds",
             "rating": 1,
             "review": "HOT TRASH"
         },
         {
-            "restaurant":"Burger King",
+            "restaurant": "Burger King",
             "rating": 1000000,
             "review": "GOOD"
+        },
+        {
+            "restaurant": "Carl's Jr",
+            "rating": 4,
+            "review": "Average"
+        },
+        {
+            "restaurant": "Carl's Jr",
+            "rating": 4,
+            "review": "Average"
+        },
+        {
+            "restaurant": "Carl's Jr",
+            "rating": 4,
+            "review": "Average"
         }
     ]
 }
