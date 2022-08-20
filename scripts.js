@@ -2,6 +2,13 @@
 
 const fs = require('fs');
 
+const newRestaurant = {
+    restaurant: "Carl's Jr",
+    rating: 4,
+    review: "Average",
+};
+
+
 fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
     if(err) {
         console.log("File read failed:", err);
@@ -9,8 +16,11 @@ fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
     }
     else {
         try {
-            const data = JSON.parse(jsonString);
-            console.log(data[0].restaurant);
+            const foodsData = JSON.parse(jsonString);
+            console.log(foodsData);
+            foodsData['restaurants'].push(newRestaurant);
+            // jsonStr = JSON.stringify(foodsData);
+            console.log(foodsData);
         }
         catch (err) {
             console.log('Error parsing JSON', err);
@@ -19,11 +29,21 @@ fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
     }
 })
 
-const newRestaurant = {
-    restaurant: "Carl's Jr",
-    rating: 4,
-    review: "Average",
-};
+// const newRestaurant = {
+//     restaurant: "Carl's Jr",
+//     rating: 4,
+//     review: "Average",
+// };
 
-const addTojson = JSON.stringify(newRestaurant);
-console.log(addTojson);
+// const addTojson = JSON.stringify(newRestaurant);
+
+// fs.writeFile('./Foods.json'[0], addTojson, err => {
+//     if (err) {
+//         console.log("Error writing to file", err);
+//     }
+//     else{
+//         console.log('Success');
+//     }
+// });
+
+// console.log(addTojson);

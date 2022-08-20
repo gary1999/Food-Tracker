@@ -1,12 +1,15 @@
-[
-    {
-        "restaurant":"McDonalds",
-        "rating": 1,
-        "review-notes": "HOT TRASH"
-    },
-    {
-        "restaurant":"Burger King",
-        "rating": 1000000,
-        "review-notes": "GOOD"
-    }
-]
+{
+    "restaurants": 
+    [
+        {
+            "restaurant":"McDonalds",
+            "rating": 1,
+            "review": "HOT TRASH"
+        },
+        {
+            "restaurant":"Burger King",
+            "rating": 1000000,
+            "review": "GOOD"
+        }
+    ]
+}
