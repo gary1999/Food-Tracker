@@ -88,6 +88,12 @@ body{
     width: 500px;
 }
 
+/* .input:focus{
+    box-shadow: 0 0 10px #ff0000;
+        border-color: #ff0000;
+        outline: none !important;
+} */
+
 .input {
 
     display: flex;

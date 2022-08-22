@@ -32,21 +32,21 @@
     <div class="input-content">
 
         <div class="input-container">
-            <div class="input">
-
-                <div class="input-restaurant-name">
-                    <label for="restaurant-name">Restaurant Name:</label>
-                    <textarea id="restaurant-name"></textarea>
+            <!-- <form> -->
+                <div class="input"> 
+                    <div class="input-restaurant-name">
+                        <label for="restaurant-name">Restaurant Name:</label>
+                        <textarea id="restaurant-name" placeholder="Restaurant Name" required></textarea>
+                    </div>
+                    
+                    <div class="input-food-name">
+                        <label for="food-name">Name of food:</label>
+                    <textarea id="food-name" placeholder="Food Name"></textarea>
                 </div>
                 
-                <div class="input-food-name">
-                    <label for="food-name">Name of food:</label>
-                    <textarea id="food-name"></textarea>
-                </div>
-
                 <div class="input-review-rating">
                     <label for="review-rating" name="review-rating">Rating: </label>
-                        <div class="review-star-container">
+                    <div class="review-star-container">
                         <input type="radio" id="review-rating-one" name="review-rating-score" value="1">
                         <label for="rating-one">1</label><br>
                         <input type="radio" id="review-rating-two" name="review-rating-score" value="2">
@@ -59,19 +59,20 @@
                         <label for="rating-five">5</label><br>
                     </div>
                 </div>
-
+                
                 <div class="input-review-notes">
                     <label for="review-notes">Add notes about your experience:</label><br>
-                    <textarea id="review-notes" name="review-notes"></textarea>
+                    <textarea id="review-notes" name="review-notes" placeholder="Add your review here"></textarea>
                 </div>
-                    
-                <div class="input-photos">
+                
+                <!-- <div class="input-photos">
                     <label for="input-photos">Add photos: </label>
                     <input type="file" id="photo" name="photo">
-                </div>
-
+                </div> -->
+                
                 <input type="submit" value="Submit" class="submit-button" onclick="addReview()">
-            </div>
+            <!-- </form> -->
+        </div>
 
     </div>
 
