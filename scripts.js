@@ -1,58 +1,16 @@
-// console.log(JSON.parse(foods)[0].restaurant);
+let reviews = [];
 
-const fs = require('fs');
+const addReview = () => {
 
-const newRestaurant = {
-    restaurant: "Carl's Jr",
-    rating: 4,
-    review: "Average",
-};
+    // let restaurantID = document.getElementById("restaurant-name");
+    let restaurantIDInputValue = document.getElementById("restaurant-name").value;
+    let restaurantFoodInputValue = document.getElementById("food-name").value;
 
 
-fs.readFile('./Foods.json', 'utf-8', (err, jsonString) => {
-    if(err) {
-        console.log("File read failed:", err);
-        return;
-    }
-    else {
-        try {
-            const foodsData = JSON.parse(jsonString);
-            //console.log(foodsData);
-            foodsData['restaurants'].push(newRestaurant);
-            fs.writeFile('./Foods.json', JSON.stringify(foodsData, null, 4), err => {
-                if (err) {
-                    console.log("Error writing to file", err);
-                }
-                else{
-                    console.log('Success');
-                }
-            })
-            //console.log(foodsData);
-        }
-        catch (err) {
-            console.log('Error parsing JSON', err);
-        }
+    console.log(restaurantIDInputValue);
+    console.log(restaurantFoodInputValue);
+    
+}
 
-    }
-})
-
-
-
-// const newRestaurant = {
-//     restaurant: "Carl's Jr",
-//     rating: 4,
-//     review: "Average",
-// };
-
-// const addTojson = JSON.stringify(newRestaurant);
-
-// fs.writeFile('./Foods.json'[0], addTojson, err => {
-//     if (err) {
-//         console.log("Error writing to file", err);
-//     }
-//     else{
-//         console.log('Success');
-//     }
-// });
-
-// console.log(addTojson);
+console.log("Hello World");
+console.log("Test")

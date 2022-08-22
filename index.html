@@ -7,6 +7,7 @@
     <title>Food Tracker</title>
 
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js" defer></script> -->
     <script src="scripts.js" defer></script>
 </head>
 
@@ -35,12 +36,12 @@
 
                 <div class="input-restaurant-name">
                     <label for="restaurant-name">Restaurant Name:</label>
-                    <textarea id="restaurant-name" name="restaurant-name"></textarea>
+                    <textarea id="restaurant-name"></textarea>
                 </div>
                 
                 <div class="input-food-name">
                     <label for="food-name">Name of food:</label>
-                    <textarea id="food-name" name="food-name"></textarea>
+                    <textarea id="food-name"></textarea>
                 </div>
 
                 <div class="input-review-rating">
@@ -69,7 +70,7 @@
                     <input type="file" id="photo" name="photo">
                 </div>
 
-                <input type="submit" value="Submit" class="submit-button">
+                <input type="submit" value="Submit" class="submit-button" onclick="addReview()">
             </div>
 
     </div>
