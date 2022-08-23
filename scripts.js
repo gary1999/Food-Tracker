@@ -2,8 +2,11 @@
 // console.log(reviewList);
 
 let reviewList = [];
-let localStorageList = localStorage.getItem('myReviewList');
-console.log(JSON.parse(localStorage.getItem('myReviewList')));
+// let localStorageList = localStorage.getItem('myReviewList');
+let localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
+console.log(localStorageList);
+
+console.log(localStorageList.length);
 
 // for (var i in localStorageList){
 //     reviewList.push([i, localStorageList[i]]);
