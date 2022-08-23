@@ -1,30 +1,39 @@
-let reviews = [];
+// let reviewList = localStorage.getItem('myReviewList');
+// console.log(reviewList);
+
+let reviewList = [];
+let localStorageList = localStorage.getItem('myReviewList');
+console.log(JSON.parse(localStorage.getItem('myReviewList')));
+
+// for (var i in localStorageList){
+//     reviewList.push([i, localStorageList[i]]);
+// }
+
+// console.log(reviewList);
 
 const addReview = (event) => {
 
-    let reviewList = [];
-
     event.preventDefault();
 
-    // let restaurantID = document.getElementById("restaurant-name");
-    let restaurantNameInputValue = document.getElementById("restaurant-name").value;
-    let restaurantFoodInputValue = document.getElementById("food-name").value;
-    let restaurantReviewRatingValue;
-    let restaurantReviewInputValue = document.getElementById("review-notes").value;
-
     let reviewItem = {
-        name: restaurantNameInputValue,
+        name: document.getElementById("restaurant-name").value,
         // rating: 
-        food: restaurantFoodInputValue,
-        notes: restaurantReviewInputValue
+        food: document.getElementById("food-name").value,
+        notes: document.getElementById("review-notes").value
     }
 
     reviewList.push(reviewItem);
-    document.forms[0].reset();
+    // document.forms[0].reset();
+    document.querySelector('form').reset();
     
+    console.log(reviewList);
+
     console.warn('added', {reviewList});
     let pre = document.querySelector('#msg pre');
     pre.textContent = '\n' + JSON.stringify(reviewList, '\t', 2);
+
+    localStorage.setItem('myReviewList', JSON.stringify(reviewList));
+
 
 }
 
