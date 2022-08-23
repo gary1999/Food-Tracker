@@ -145,13 +145,13 @@ body{
 }
 
 
-.submit-button{
+#submit-button{
     margin-top: 10px;
     height: 25px;
     width: 50px;
 }
 
-.submit-button:hover {
+#submit-button:hover {
     background: green;
     transition: ease 0.2s;
 
