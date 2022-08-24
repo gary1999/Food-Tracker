@@ -8,11 +8,12 @@ console.log(localStorageList);
 
 console.log(localStorageList.length);
 
-// for (var i in localStorageList){
-//     reviewList.push([i, localStorageList[i]]);
-// }
+for (var i in localStorageList){
+    reviewList.push([localStorageList[i]]);
+}
 
-// console.log(reviewList);
+console.log(reviewList[0][0]);
+console.log(reviewList[1][0]);
 
 const addReview = (event) => {
 
