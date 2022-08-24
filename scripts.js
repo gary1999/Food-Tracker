@@ -1,19 +1,29 @@
-// let reviewList = localStorage.getItem('myReviewList');
-// console.log(reviewList);
 
 let reviewList = [];
-// let localStorageList = localStorage.getItem('myReviewList');
-let localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
-console.log(localStorageList);
+let localStorageList;
+let localStorageListLength;
 
-console.log(localStorageList.length);
 
-for (var i in localStorageList){
-    reviewList.push([localStorageList[i]]);
+const initialise = () => {
+    
+    localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
+    console.log(localStorageList);
+
+    if (localStorageList != null){
+        localStorageListLength = localStorageList.length;
+        for (var i in localStorageList){
+            reviewList.push([localStorageList[i]]);
+        }
+    }
+
+// console.log(reviewList[0][0]); // First review array 
+// console.log(reviewList[1][0]); // Second review array
+
 }
 
-console.log(reviewList[0][0]);
-console.log(reviewList[1][0]);
+const resetStorage = () => {
+    localStorage.setItem('myReviewList', null);
+}
 
 const addReview = (event) => {
 
@@ -27,23 +37,18 @@ const addReview = (event) => {
     }
 
     reviewList.push(reviewItem);
-    // document.forms[0].reset();
     document.querySelector('form').reset();
-    
     console.log(reviewList);
-
-    console.warn('added', {reviewList});
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(reviewList, '\t', 2);
-
+    
     localStorage.setItem('myReviewList', JSON.stringify(reviewList));
-
 
 }
 
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("submit-button").addEventListener('click', addReview);
+    document.getElementById("reset-button").addEventListener('click', resetStorage);
 })
 
+initialise();
 console.log("Hello World");
 console.log("Test")
