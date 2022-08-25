@@ -18,7 +18,6 @@ const initialise = () => {
 
 // console.log(reviewList[0][0]); // First review array 
 // console.log(reviewList[1][0]); // Second review array
-
 }
 
 const resetStorage = () => {
@@ -27,15 +26,25 @@ const resetStorage = () => {
 
 const addReview = (event) => {
 
+    
+
     event.preventDefault();
 
     let reviewItem = {
         name: document.getElementById("restaurant-name").value,
-        // rating: 
+        rating: document.querySelector('input[name="review-rating-score"]:checked').value,
         food: document.getElementById("food-name").value,
         notes: document.getElementById("review-notes").value
     }
 
+    for (var [key, value] of Object.entries(reviewItem)){
+        console.log(value);
+        // if (Object.keys(i).length === 0){
+        //     console.log("Invalid input");
+        // }
+    }
+
+    console.log(reviewItem);
     reviewList.push(reviewItem);
     document.querySelector('form').reset();
     console.log(reviewList);
