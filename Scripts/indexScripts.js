@@ -71,26 +71,25 @@ const checkReviewInput = () => {
     }
 }
 
-
-
-const addReview = (event) => {
-    event.preventDefault();
-    let restaurantVar, ratingVar, foodVar, reviewVar;
-
+const checkRatingInput = () => {
     // Radio Button
     var check = (document.querySelector('input[name="review-rating-score"]:checked'))
     if(check != null){
+        return(document.querySelector('input[name="review-rating-score"]:checked').value);
         console.log("selected");
     }
     else {
         console.log("not selected");
     }
+}
 
-
+const addReview = (event) => {
+    event.preventDefault();
+    // let restaurantVar, ratingVar, foodVar, reviewVar;
 
     let reviewItem = {
         restaurant: checkRestaurantInput(),
-        rating: document.querySelector('input[name="review-rating-score"]:checked').value,
+        rating: checkRatingInput(),
         food: checkFoodInput(),
         review: checkReviewInput()
         // food: document.getElementById("food-name").value,
@@ -100,16 +99,29 @@ const addReview = (event) => {
     
 
     for (var [key, value] of Object.entries(reviewItem)){
-        console.log(value);
+        if (typeof value === "undefined"){
+            console.log("Detected undefined")
+        } 
+        else {
+            console.log("it is working");
+        }
+        // if(value != undefined){
+        //     console.log('test');
+        //     console.log(value);
+        //     console.log(reviewItem);
+        // }
+        // else{
+        //     console.log("Value does not exist");
+        // }
         // if (Object.keys(i).length === 0){
         //     console.log("Invalid input");
         // }
     }
 
-    console.log(reviewItem);
+    // console.log(reviewItem);
     reviewList.push(reviewItem);
     document.querySelector('form').reset();
-    console.log(reviewList);
+    // console.log(reviewList);
     
     localStorage.setItem('myReviewList', JSON.stringify(reviewList));
 
@@ -121,5 +133,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 initialise();
-console.log("Hello World");
-console.log("Test")
