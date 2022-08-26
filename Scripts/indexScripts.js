@@ -24,8 +24,8 @@ const resetStorage = () => {
     localStorage.setItem('myReviewList', null);
 }
 
-const printError = () => {
-    console.log("error no value");
+const printError = (foodString) => {
+    console.log(`error no ${foodString}`);
     if(!(!!document.getElementById("elementTest"))){
         const element = document.createElement('p');
         element.innerHTML = "Error, missing inputs";
@@ -37,8 +37,45 @@ const printError = () => {
     };
 }
 
-const addReview = (event) => {
+// Hard code to test
+const checkRestaurantInput = () => {
+    var restaurantInput = document.getElementById("restaurant-name");
+    if (restaurantInput && restaurantInput.value) {
+        restaurantVar = document.getElementById("restaurant-name").value;
+        return(restaurantVar);
+    }
+    else{
+        printError(`restaurant`);
+    }
+}
 
+const checkFoodInput= () => {
+    var foodInput = document.getElementById("food-name");
+    if (foodInput && foodInput.value) {
+        foodVar = document.getElementById("food-name").value;
+        return(foodVar);
+    }
+    else{
+        printError(`food`);
+    }
+}
+
+const checkReviewInput = () => {
+    var reviewInput = document.getElementById("review-notes");
+    if (reviewInput && reviewInput.value) {
+        reviewVar = document.getElementById("review-notes").value;
+        return(reviewVar);
+    }
+    else{
+        printError(`review`);
+    }
+}
+
+
+
+const addReview = (event) => {
+    event.preventDefault();
+    let restaurantVar, ratingVar, foodVar, reviewVar;
 
     // Radio Button
     var check = (document.querySelector('input[name="review-rating-score"]:checked'))
@@ -47,25 +84,17 @@ const addReview = (event) => {
     }
     else {
         console.log("not selected");
-        printError();
     }
 
 
-    
-    var nameInput = document.getElementById("restaurant-name");
-    if (nameInput && nameInput.value) {
-        console.log("value exists");
-    }
-
-
-
-    event.preventDefault();
 
     let reviewItem = {
-        name: document.getElementById("restaurant-name").value,
+        restaurant: checkRestaurantInput(),
         rating: document.querySelector('input[name="review-rating-score"]:checked').value,
-        food: document.getElementById("food-name").value,
-        notes: document.getElementById("review-notes").value
+        food: checkFoodInput(),
+        review: checkReviewInput()
+        // food: document.getElementById("food-name").value,
+        // notes: document.getElementById("review-notes").value
     }
 
     
