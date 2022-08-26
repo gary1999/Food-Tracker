@@ -26,9 +26,15 @@ const resetStorage = () => {
 
 const printError = () => {
     console.log("error no value");
-    const element = document.createElement('p');
-    element.innerHTML = "Error, missing inputs";
-    document.getElementById("button-div").appendChild(element);
+    if(!(!!document.getElementById("elementTest"))){
+        const element = document.createElement('p');
+        element.innerHTML = "Error, missing inputs";
+        element.id = "elementTest";
+        document.getElementById("button-div").appendChild(element);
+    }
+    else{
+        console.log("Div already exists");
+    };
 }
 
 const addReview = (event) => {
