@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Tracker</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Stylesheets/indexStyles.css">
     <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js" defer></script> -->
-    <script src="scripts.js" defer></script>
+    <script src="/Scripts/indexScripts.js" defer></script>
+
 </head>
 
 <body>
 
     <div class="header">
         <ul class="navbar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Past-Eats</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pasteats.html">Past-Eats</a></li>
             <li><a href="#">Best Rated</a></li>
         </ul>
     </div>
@@ -30,23 +31,22 @@
     </div>
 
     <div class="input-content">
-
         <div class="input-container">
             <form>
                 <div class="input"> 
                     <div class="input-restaurant-name">
                         <label for="restaurant-name">Restaurant Name:</label>
-                        <textarea id="restaurant-name" placeholder="Restaurant Name"></textarea>
+                        <textarea id="restaurant-name" class="userInput" placeholder="Restaurant Name"></textarea>
                     </div>
                     
                     <div class="input-food-name">
                         <label for="food-name">Name of food:</label>
-                    <textarea id="food-name" placeholder="Food Name"></textarea>
+                    <textarea id="food-name" class="userInput" placeholder="Food Name"></textarea>
                 </div>
                 
                 <div class="input-review-rating">
                     <label for="review-rating" name="review-rating">Rating: </label>
-                    <div class="review-star-container">
+                    <div class="review-star-container userInput">
                         <input type="radio" id="review-rating-one" name="review-rating-score" value="1">
                         <label for="rating-one">1</label><br>
                         <input type="radio" id="review-rating-two" name="review-rating-score" value="2">
@@ -62,14 +62,17 @@
                 
                 <div class="input-review-notes">
                     <label for="review-notes">Add notes about your experience:</label><br>
-                    <textarea id="review-notes" name="review-notes" placeholder="Add your review here"></textarea>
+                    <textarea id="review-notes" name="review-notes" class="userInput" placeholder="Add your review here"></textarea>
                 </div>
                 
                 <!-- <div id="msg">
                     <pre></pre>
                 </div> -->
                 
-                <button id="submit-button">Submit</button>
+                <div id="button-div">
+                    <button id="submit-button">Submit</button>
+                </div>
+
                 <button id="reset-button">Reset test</button>
                 
             </form>

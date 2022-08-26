@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+    
+}
+
+:root{
+    --background-color: #1e1f22;
+    --text-color: #ffffff;
+}
+
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.header{
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000; /* Top layer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 50px 18%;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar a{
+    color: var(--text-color);
+    /* font-weight: 500; */
+    padding: 10px 27px;
+    font-size: 40px;
+}
+
+.home-content {
+
+    padding: 5px;
+    margin: 10px;
+}
+
+.info {
+    height: 100vh;
+    max-height: 100px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.input-content {
+    border-radius: 2px;
+    border: solid red;
+    padding: 5px;
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.input-container {
+
+    border-radius: 2px;
+    border: solid red;
+
+    height: 600px;
+    /* max-height: 400px; */
+    width: 500px;
+}
+
+/* .input:focus{
+    box-shadow: 0 0 10px #ff0000;
+        border-color: #ff0000;
+        outline: none !important;
+} */
+
+.input {
+
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.input-restaurant-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#restaurant-name, #food-name {
+    margin-top: 10px;
+    padding: 10px;
+    height: 38px;
+    width: 100%;
+    resize: none;
+
+}
+
+#input-review-rating {
+    height: 300px;
+    width: 100%;
+}
+
+.review-star-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.input-review-notes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#review-notes {
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+
+    resize: none;
+}
+
+
+#input-extra {
+    padding: 10px;
+}
+
+#button-div {
+    display: flex;
+    align-items: center;
+
+}
+
+#button-div p{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#submit-button, #reset-button{
+    margin-top: 10px;
+    height: 35px;
+    width: 50px;
+}
+
+#submit-button:hover {
+    background: green;
+    transition: ease 0.2s;
+
+}
+

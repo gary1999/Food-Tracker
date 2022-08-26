@@ -64,12 +64,12 @@ body{
     flex-direction: column;
 }
 
-
-.input-content {
+.past-eats-content {
     border-radius: 2px;
     border: solid red;
     padding: 5px;
     margin: 10px;
+    height: 600px;
 
     display: flex;
     align-items: center;
@@ -78,82 +78,6 @@ body{
 
 }
 
-.input-container {
-
-    border-radius: 2px;
-    border: solid red;
-
-    height: 600px;
-    /* max-height: 400px; */
-    width: 500px;
-}
-
-/* .input:focus{
-    box-shadow: 0 0 10px #ff0000;
-        border-color: #ff0000;
-        outline: none !important;
-} */
-
-.input {
-
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.input-restaurant-name {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#restaurant-name, #food-name {
-    margin-top: 10px;
-    padding: 10px;
-    height: 38px;
-    width: 100%;
-    resize: none;
+.past-eats-container {
 
 }
-
-#input-review-rating {
-    height: 300px;
-    width: 100%;
-}
-
-.review-star-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px;
-}
-
-.input-review-notes{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#review-notes {
-    padding: 10px;
-    height: 100px;
-    width: 100%;
-
-    resize: none;
-}
-
-
-#input-extra {
-    padding: 10px;
-}
-
-
-#submit-button, #reset-button{
-    margin-top: 10px;
-    height: 35px;
-    width: 50px;
-}
-
-#submit-button:hover {
-    background: green;
-    transition: ease 0.2s;
-
-}
-

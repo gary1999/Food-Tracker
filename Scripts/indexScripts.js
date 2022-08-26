@@ -24,9 +24,34 @@ const resetStorage = () => {
     localStorage.setItem('myReviewList', null);
 }
 
+const printError = () => {
+    console.log("error no value");
+    const element = document.createElement('p');
+    element.innerHTML = "Error, missing inputs";
+    document.getElementById("button-div").appendChild(element);
+}
+
 const addReview = (event) => {
 
+
+    // Radio Button
+    var check = (document.querySelector('input[name="review-rating-score"]:checked'))
+    if(check != null){
+        console.log("selected");
+    }
+    else {
+        console.log("not selected");
+        printError();
+    }
+
+
     
+    var nameInput = document.getElementById("restaurant-name");
+    if (nameInput && nameInput.value) {
+        console.log("value exists");
+    }
+
+
 
     event.preventDefault();
 
@@ -36,6 +61,8 @@ const addReview = (event) => {
         food: document.getElementById("food-name").value,
         notes: document.getElementById("review-notes").value
     }
+
+    
 
     for (var [key, value] of Object.entries(reviewItem)){
         console.log(value);
