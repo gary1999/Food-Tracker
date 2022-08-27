@@ -97,33 +97,37 @@ const addReview = (event) => {
     }
 
     
+    let allInputVerified = true;
 
     for (var [key, value] of Object.entries(reviewItem)){
         if (typeof value === "undefined"){
-            console.log("Detected undefined")
+            console.log("Detected undefined");
+            allInputVerified = false;
+            break;
         } 
         else {
             console.log("it is working");
         }
-        // if(value != undefined){
-        //     console.log('test');
-        //     console.log(value);
-        //     console.log(reviewItem);
-        // }
-        // else{
-        //     console.log("Value does not exist");
-        // }
-        // if (Object.keys(i).length === 0){
-        //     console.log("Invalid input");
-        // }
     }
 
-    // console.log(reviewItem);
-    reviewList.push(reviewItem);
+    if (allInputVerified){
+        reviewList.push(reviewItem);
+        console.log(reviewItem);
+        localStorage.setItem('myReviewList', JSON.stringify(reviewList));
+    }
+    else {
+        console.log("input missing");
+    }
+
+    //reviewList.push(reviewItem);
+
+    //console.log(reviewItem);
+
     document.querySelector('form').reset();
-    // console.log(reviewList);
-    
-    localStorage.setItem('myReviewList', JSON.stringify(reviewList));
+    localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
+    console.log(localStorageList);
+    // console.log(localStorageList);
+
 
 }
 
