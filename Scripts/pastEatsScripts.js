@@ -29,24 +29,24 @@ const displayCards = () => {
         restaurantCardTitle.innerHTML = (`${localStorageList[i].restaurant}`);
         restaurantCard.appendChild(restaurantCardTitle);
 
+        //Create card food names
+        const restaurantCardFood = document.createElement('div');
+        restaurantCardFood.classList = 'cardFood';
+        restaurantCardFood.innerHTML = (`${localStorageList[i].food}`);
+        restaurantCard.appendChild(restaurantCardFood);
+        
         //Create card ratings
         const restaurantCardRating = document.createElement('div');
         restaurantCardRating.classList = 'cardRating';
         restaurantCardRating.innerHTML = (`Your Rating: ${localStorageList[i].rating}`);
         restaurantCard.appendChild(restaurantCardRating);
 
-        //Create card food names
-        const restaurantCardFood = document.createElement('div');
-        restaurantCardFood.classList = 'cardFood';
-        restaurantCardFood.innerHTML = (`${localStorageList[i].food}`);
-        restaurantCard.appendChild(restaurantCardFood);
-
         //Create card reviews
         const restaurantCardReview = document.createElement('div');
         restaurantCardReview.classList = 'cardReview';
         restaurantCardReview.innerHTML = (`${localStorageList[i].review}`);
         restaurantCard.appendChild(restaurantCardReview);
-
+        
 
         //Append to container div in HTML
         document.getElementById("past-eats-container").appendChild(restaurantCard);

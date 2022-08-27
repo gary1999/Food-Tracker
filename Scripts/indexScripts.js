@@ -63,16 +63,6 @@ const checkFoodInput= () => {
         printError(`food`);
     }
 }
-const checkReviewInput = () => {
-    var reviewInput = document.getElementById("review-notes");
-    if (reviewInput && reviewInput.value) {
-        reviewVar = document.getElementById("review-notes").value;
-        return(reviewVar);
-    }
-    else{
-        printError(`review`);
-    }
-}
 const checkRatingInput = () => {
     // Radio Button
     var check = (document.querySelector('input[name="review-rating-score"]:checked'))
@@ -84,6 +74,16 @@ const checkRatingInput = () => {
         console.log("Rating not selected");
     }
 }
+const checkReviewInput = () => {
+    var reviewInput = document.getElementById("review-notes");
+    if (reviewInput && reviewInput.value) {
+        reviewVar = document.getElementById("review-notes").value;
+        return(reviewVar);
+    }
+    else{
+        printError(`review`);
+    }
+}
 
 const addReview = (event) => {
     event.preventDefault();
@@ -91,8 +91,8 @@ const addReview = (event) => {
 
     let reviewItem = {
         restaurant: checkRestaurantInput(),
-        rating: checkRatingInput(),
         food: checkFoodInput(),
+        rating: checkRatingInput(),
         review: checkReviewInput()
         // food: document.getElementById("food-name").value,
         // notes: document.getElementById("review-notes").value
@@ -105,9 +105,6 @@ const addReview = (event) => {
         if (typeof value === "undefined"){
             allInputVerified = false;
             break;
-        } 
-        else {
-            console.log("it is working");
         }
     }
 
