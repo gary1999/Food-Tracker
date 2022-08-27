@@ -9,12 +9,18 @@ const initialise = () => {
     localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
     console.log(localStorageList);
 
+    if (localStorageList == null){
+        console.log("yes");
+    }
     if (localStorageList != null){
         localStorageListLength = localStorageList.length;
         for (var i in localStorageList){
-            reviewList.push([localStorageList[i]]);
+            console.log(typeof localStorageList[i]);
+            reviewList.push(localStorageList[i]);
         }
     }
+
+    
 
 // console.log(reviewList[0][0]); // First review array 
 // console.log(reviewList[1][0]); // Second review array
@@ -25,16 +31,16 @@ const resetStorage = () => {
 }
 
 const printError = (foodString) => {
-    console.log(`error no ${foodString}`);
+    console.log(`Error there is no ${foodString} input`);
     if(!(!!document.getElementById("elementTest"))){
         const element = document.createElement('p');
         element.innerHTML = "Error, missing inputs";
         element.id = "elementTest";
         document.getElementById("button-div").appendChild(element);
     }
-    else{
-        console.log("Div already exists");
-    };
+    // else{
+    //     console.log("Div already exists");
+    // };
 }
 
 // Hard code to test
@@ -48,7 +54,6 @@ const checkRestaurantInput = () => {
         printError(`restaurant`);
     }
 }
-
 const checkFoodInput= () => {
     var foodInput = document.getElementById("food-name");
     if (foodInput && foodInput.value) {
@@ -59,7 +64,6 @@ const checkFoodInput= () => {
         printError(`food`);
     }
 }
-
 const checkReviewInput = () => {
     var reviewInput = document.getElementById("review-notes");
     if (reviewInput && reviewInput.value) {
@@ -70,7 +74,6 @@ const checkReviewInput = () => {
         printError(`review`);
     }
 }
-
 const checkRatingInput = () => {
     // Radio Button
     var check = (document.querySelector('input[name="review-rating-score"]:checked'))
@@ -79,7 +82,7 @@ const checkRatingInput = () => {
         console.log("selected");
     }
     else {
-        console.log("not selected");
+        console.log("Rating not selected");
     }
 }
 
@@ -101,7 +104,6 @@ const addReview = (event) => {
 
     for (var [key, value] of Object.entries(reviewItem)){
         if (typeof value === "undefined"){
-            console.log("Detected undefined");
             allInputVerified = false;
             break;
         } 
