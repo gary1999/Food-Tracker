@@ -15,7 +15,6 @@ const initialise = () => {
     if (localStorageList != null){
         localStorageListLength = localStorageList.length;
         for (var i in localStorageList){
-            console.log(typeof localStorageList[i]);
             reviewList.push(localStorageList[i]);
         }
     }

@@ -64,7 +64,7 @@ body{
     flex-direction: column;
 }
 
-.past-eats-content {
+#past-eats-content {
     border-radius: 2px;
     border: solid red;
     padding: 5px;
@@ -78,7 +78,18 @@ body{
 
 }
 
-.past-eats-container {
-
+#past-eats-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.card {
+    border-radius: 2px;
+    border: solid red;
+    padding: 5px;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
