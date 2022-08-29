@@ -90,10 +90,10 @@ const addReview = (event) => {
     // let restaurantVar, ratingVar, foodVar, reviewVar;
 
     let reviewItem = {
-        restaurant: checkRestaurantInput(),
-        food: checkFoodInput(),
-        rating: checkRatingInput(),
-        review: checkReviewInput()
+        Restaurant: checkRestaurantInput(),
+        Food: checkFoodInput(),
+        Rating: checkRatingInput(),
+        Review: checkReviewInput()
         // food: document.getElementById("food-name").value,
         // notes: document.getElementById("review-notes").value
     }
