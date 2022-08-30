@@ -69,8 +69,8 @@ const searchReview = (reviewList) => {
     console.log("test");
     for (let i = 0; i < reviewList.length; i++){
         console.log(Object.values(reviewList[i]));
-        if(Object.values(reviewList[i]).includes("sdf")){
-            continue
+        if(Object.values(reviewList[i]).includes("1")){
+            console.log("found");
         }
         else{
             console.log("not found");
