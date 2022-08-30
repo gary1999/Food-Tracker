@@ -12,7 +12,7 @@ const initialise = () => {
 
     console.log(localStorageList);
     displayCards(localStorageList);
-
+    searchReview(localStorageList);
 }
 
 
@@ -24,6 +24,8 @@ const displayCards = (reviewList) => {
 
         //Get names of keys
         //console.log(Object.keys(reviewList[i]));
+        //Get values of keys
+        //console.log(Object.values(reviewList[i]));
 
         //Create Card
         const restaurantCard = document.createElement('div');
@@ -62,9 +64,19 @@ const displayCards = (reviewList) => {
 }
 
 
-const searchReview = () => {
+const searchReview = (reviewList) => {
     
     console.log("test");
+    for (let i = 0; i < reviewList.length; i++){
+        console.log(Object.values(reviewList[i]));
+        if(Object.values(reviewList[i]).includes("sdf")){
+            continue
+        }
+        else{
+            console.log("not found");
+        }
+    
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
