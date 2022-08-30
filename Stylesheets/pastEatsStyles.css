@@ -145,6 +145,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 18px;
     margin-top: 4px;
 
@@ -152,5 +153,30 @@ body{
 
     border: solid red;
     border-radius: 3px;
+}
 
+.cardReview p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reviewSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#reviewSearch input[type=text]{
+    height: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#reviewSearch input[type=button]{
+    height: 30px;
+    width: 40px;
+    margin-bottom: 10px;
 }

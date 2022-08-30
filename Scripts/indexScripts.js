@@ -35,11 +35,16 @@ const printError = (foodString) => {
         const element = document.createElement('p');
         element.innerHTML = "Error, missing inputs";
         element.id = "elementTest";
+        element.classList = "elementTestClass"
         document.getElementById("button-div").appendChild(element);
     }
     // else{
     //     console.log("Div already exists");
     // };
+}
+
+const printSuccess = () => {
+    console.log("Successfully added");
 }
 
 // Hard code to test
@@ -89,6 +94,11 @@ const addReview = (event) => {
     event.preventDefault();
     // let restaurantVar, ratingVar, foodVar, reviewVar;
 
+    const errorDivChecker = document.querySelectorAll('elementTestClass').length > 0;
+    if (errorDivChecker){
+        console.log("Exists");
+    }
+
     let reviewItem = {
         Restaurant: checkRestaurantInput(),
         Food: checkFoodInput(),
@@ -111,6 +121,7 @@ const addReview = (event) => {
     if (allInputVerified){
         reviewList.push(reviewItem);
         console.log(reviewItem);
+        printSuccess();
         localStorage.setItem('myReviewList', JSON.stringify(reviewList));
     }
     else {
