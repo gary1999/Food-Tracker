@@ -1,10 +1,10 @@
 # Food-Tracker
-Tracks the food you have eaten.
+Tracks the food you have eaten. <br />
 
 
-Try it here: https://gary1999.github.io/Food-Tracker/
+Try it here: https://gary1999.github.io/Food-Tracker/ <br /> <br />
 
 
-To do: 
-Add best rated eats so far
-Update CSS to look nicer
+To do: <br />
+Add best rated eats so far <br />
+Update CSS to look nicer <br />
