@@ -2,12 +2,12 @@ let localStorageList;
 let userSearch = [];
 
 const initialise = () => {
-    
+
     localStorageList = (JSON.parse(localStorage.getItem('myReviewList')));
     console.log(typeof localStorageList);
 
-// console.log(reviewList[0][0]); // First review array 
-// console.log(reviewList[1][0]); // Second review array
+    // console.log(reviewList[0][0]); // First review array 
+    // console.log(reviewList[1][0]); // Second review array
 
 
     console.log(localStorageList);
@@ -18,8 +18,8 @@ const initialise = () => {
 
 
 const displayCards = (reviewList) => {
-    
-    for (let i = 0; i < reviewList.length; i++){
+
+    for (let i = 0; i < reviewList.length; i++) {
         console.log(reviewList[i]);
 
         //Get names of keys
@@ -42,7 +42,7 @@ const displayCards = (reviewList) => {
         restaurantCardFood.classList = 'cardFood';
         restaurantCardFood.innerHTML = (`${reviewList[i].Food}`);
         restaurantCard.appendChild(restaurantCardFood);
-        
+
         //Create card ratings
         const restaurantCardRating = document.createElement('div');
         restaurantCardRating.classList = 'cardRating';
@@ -54,7 +54,7 @@ const displayCards = (reviewList) => {
         restaurantCardReview.classList = 'cardReview';
         restaurantCardReview.innerHTML = (`${reviewList[i].Review}`);
         restaurantCard.appendChild(restaurantCardReview);
-        
+
 
         //Append to container div in HTML
         document.getElementById("past-eats-container").appendChild(restaurantCard);
@@ -65,17 +65,17 @@ const displayCards = (reviewList) => {
 
 
 const searchReview = (reviewList) => {
-    
+
     console.log("test");
-    for (let i = 0; i < reviewList.length; i++){
+    for (let i = 0; i < reviewList.length; i++) {
         console.log(Object.values(reviewList[i]));
-        if(Object.values(reviewList[i]).includes("1")){
+        if (Object.values(reviewList[i]).includes("1")) {
             console.log("found");
         }
-        else{
+        else {
             console.log("not found");
         }
-    
+
     }
 }
 
